@@ -1,0 +1,26 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.navbar{
+    height: 10vh;
+    background-color:rgb(58, 123, 153);
+}
+
+.navbar li a{
+    color: aliceblue; 
+}
+
+.login-wrapper{
+    background: url('../assets/bg.jpg') no-repeat center;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}

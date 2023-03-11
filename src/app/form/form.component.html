@@ -1,0 +1,33 @@
+<form class="form" [formGroup]="form" (ngSubmit)="almacenar()">
+  <img src="../../assets/avatar.png" alt="">
+  <h2>Enter persons</h2>
+
+  <div class="input-group">
+    <input maxlength="20" type="text" formControlName="name" name="name" id="name" required>
+    <label class="label" for="name">Name</label>
+
+    
+  </div>
+
+  <div class="input-group">
+    <input maxlength="2" type="text" formControlName="age" name="age" id="age" required>
+    <label class="label" for="age">Age</label>
+  </div>
+
+  <div class="input-group">
+    <label id="labelB" for="birth">Date of birth:</label>
+    <input type="date" formControlName="birth" name="birth" id="birth" >
+  </div>
+  <div class="alert alert-warning" [hidden]="form.valid">
+    <span *ngIf="form.invalid && !age.errors?.['pattern']">Complete all fields</span>
+    <span *ngIf="age.errors?.['pattern']">Age must be a number</span>
+  </div>
+  <input [disabled]="form.invalid" type="submit" value="Enter" class="submit-btn">
+
+</form>
+
+
+
+
+
+
